@@ -12,7 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>
-		<?php is_front_page() ? bloginfo( 'description') : wp_title( ''); ?> | EDIT ME (header.php)
+		<?php is_front_page() ? bloginfo( 'description') : wp_title( ''); ?> | Larissa Lorenz
 	</title>
 
 	<?php // mobile meta (hooray!) ?>
@@ -29,7 +29,8 @@
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/img/win8-tile-icon.png">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/style.css">
+	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/foundation.css">
+	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css">
 
 	<?php // wordpress head functions ?>
 	<?php wp_head(); ?>
@@ -38,18 +39,9 @@
 </head>
 
 
-<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+<body>
 
 
-	<div class="row" id="top-thinggy" itemscope itemtype="http://schema.org/WPHeader">
-		<div class="small-12 columns">
-			<div id="icon">
-				<a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/img/icon.png"></a>
-			</div>
-			<div id="menu" class="noselect">
-				<div class="button">
-					<i class="fa fa-bars"></i> MENU
-				</div>
 				<?php wp_nav_menu(array(
 					'container' => false,
 					'menu' => __( 'The Main Menu', 'bonestheme' ),
@@ -57,6 +49,3 @@
 					'theme_location' => 'main-nav',
 					'depth' => 1
 				)); ?>
-			</div>
-		</div>
-	</div>
