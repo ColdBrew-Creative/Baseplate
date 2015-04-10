@@ -12,7 +12,7 @@ The comments page for Bones
 
 if ( post_password_required() ) {
 
-  return;
+	return;
 
 }
 
@@ -26,75 +26,75 @@ if ( post_password_required() ) {
 
 
 
-  <?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>
 
 
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
+		<h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
 
 
 
-    <section class="commentlist">
+		<section class="commentlist">
 
-      <?php
+			<?php
 
-        wp_list_comments( array(
+				wp_list_comments( array(
 
-          'style'             => 'div',
+					'style'             => 'div',
 
-          'short_ping'        => true,
+					'short_ping'        => true,
 
-          'avatar_size'       => 40,
+					'avatar_size'       => 40,
 
-          'callback'          => 'bones_comments',
+					'callback'          => 'bones_comments',
 
-          'type'              => 'all',
+					'type'              => 'all',
 
-          'reply_text'        => __('Reply', 'bonestheme'),
+					'reply_text'        => __('Reply', 'bonestheme'),
 
-          'page'              => '',
+					'page'              => '',
 
-          'per_page'          => '',
+					'per_page'          => '',
 
-          'reverse_top_level' => null,
+					'reverse_top_level' => null,
 
-          'reverse_children'  => ''
+					'reverse_children'  => ''
 
-        ) );
+				) );
 
-      ?>
+			?>
 
-    </section>
-
-
-
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-
-    	<nav class="navigation comment-navigation" role="navigation">
-
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'bonestheme' ) ); ?></div>
-
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'bonestheme' ) ); ?></div>
-
-    	</nav>
-
-    <?php endif; ?>
+		</section>
 
 
 
-    <?php if ( ! comments_open() ) : ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-    	<p class="no-comments"><?php _e( 'Comments are closed.' , 'bonestheme' ); ?></p>
+			<nav class="navigation comment-navigation" role="navigation">
 
-    <?php endif; ?>
+				<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'bonestheme' ) ); ?></div>
+
+				<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'bonestheme' ) ); ?></div>
+
+			</nav>
+
+		<?php endif; ?>
 
 
 
-  <?php endif; ?>
+		<?php if ( ! comments_open() ) : ?>
+
+			<p class="no-comments"><?php _e( 'Comments are closed.' , 'bonestheme' ); ?></p>
+
+		<?php endif; ?>
 
 
 
-  <?php comment_form(); ?>
+	<?php endif; ?>
+
+
+
+	<?php comment_form(); ?>
 
 
 
