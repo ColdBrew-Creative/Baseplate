@@ -12,19 +12,18 @@
 				</div>
 
 				<div class="medium-6 large-3 columns">
-					<h1>LOCATIONS</h1>
-					<p>San Francisco
+					<h1>Title 2</h1>
+					<p>A description</p>
 						<ul>
 							<li>Pier 1/2</li>
 							<li>Pier 1</li>
 							<li>Pier 39</li>
 							<li>Pier 40</li>
 						</ul>
-					</p>
 				</div>
 
 				<div class="medium-6 large-3 columns">
-					<h1>NEWS</h1>
+					<h1>Title 3</h1>
 					<?php
 						// Fetch 5 recent blog posts
 						$footerquery = new WP_Query('showposts=5');
@@ -53,10 +52,13 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/min/jquery-2.1.3.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
 
 	<!-- Google Analytics goes in here: -->
 	<?php if(!is_user_logged_in()) { ?>
+
+		<!-- Google Analytics CODE GOES HERE -->
+
 	<?php } ?>
 
 	<?php wp_footer(); ?><!-- all scripts before this line -->

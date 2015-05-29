@@ -12,10 +12,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title>
-		<?php is_front_page() ? bloginfo('description') : wp_title(''); ?> | Larissa Lorenz
+		<?php is_front_page() ? bloginfo('description') : wp_title(''); ?> | YOUR SITE
 	</title>
-
-	<?php // mobile meta (hooray!) ?>
+	
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -30,7 +29,6 @@
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/foundation.css">
 	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css">
 
 	<?php // wordpress head functions ?>

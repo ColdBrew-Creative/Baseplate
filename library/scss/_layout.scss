@@ -1,4 +1,15 @@
-// Main layout styles go here
+/* Put all of your general styles here */
+
+/* Table of Contents 
+
+*** 1. General ***
+*** 2. Navigation ***
+*** 3. Components ***
+*** 4. Footer ***
+*** 5. Specific page #1 ***
+*** 6. Specific page #2 ***
+
+*/
 
 .align-left {
 	float: left;
@@ -8,16 +19,3 @@
 	margin: 0 auto;
 	float: none;
 }
-
-
-// Responsive styles if needed
-// @include responsive($big-break) {
-// }
-// @include responsive($small-break) {
-// }
-
-// Mobile first styles if needed
-// @include mobilefirst($big-break) {
-// }
-// @include mobilefirst($small-break) {
-// }

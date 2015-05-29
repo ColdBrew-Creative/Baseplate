@@ -3,9 +3,9 @@
 	<div class="row">
 		<div class="large-12 columns">
 
-			<h1>Motherplate</h1>
+			<h1>Baseplate</h1>
 
-			<h2>A bare bones responsive SCSS boilerplate for web designers</h2>
+			<h2>A modern starting point for WordPress themes.</h2>
 
 			<hr>
 

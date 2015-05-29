@@ -36,23 +36,6 @@
   box-shadow: inset $horizontal $vertical $blur $color;
 }
 
-// Responsive mixins
-@mixin responsive($res)
-{
-  @media screen and (max-width: $res)
-  {
-    @content;
-  }
-}
-
-@mixin mobilefirst($res)
-{
-  @media screen and (min-width: $res)
-  {
-    @content;
-  }
-}
-
 // Animations: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 @mixin keyframes($animation-name) {
   @-webkit-keyframes $animation-name {
