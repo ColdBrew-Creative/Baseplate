@@ -4,10 +4,6 @@ $btn-br: 5px; // Button border-radius
 $padding: 40px; // Padding and margins
 $line-height: 44px; // Consistent height for buttons, inputs etc.
 
-// Responsive breakpoints
-$small-break: 480px;
-$big-break: 780px;
-
 // Better default colors
 // Cool
 $aqua:  #7FDBFF;
@@ -37,6 +33,5 @@ $tertiary-color: #aaa;
 
 $bad-color: $red; // Bad color for errors, validation etc.
 $good-color: $green; // Good color for success etc.
-$info-color: $blue; // Good color for success etc.
-$warning-color: $orange; // Good color for success etc.
+$warning-color: $orange; // Warning color for almost errors
 $subtle-color: $grey; // Subtle color for subtle text

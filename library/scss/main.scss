@@ -1,30 +1,22 @@
 // Reset using Normalize
-@import "reset";
+@import "normalize";
 
-// Set variables and reusable mixins
+// Set variables and reusable mixins and Bourbon
 @import "config";
 @import "mixins";
+@import "bourbon/bourbon";
+
+// Bring in Foundation
+@import "foundation/foundation";
 
 // Import typical layout sass modules
 @import "type";
-@import "links";
 @import "tables";
 @import "forms";
-@import "other";
-@import "media";
 
 // Font Awesome icons
-@import "icons";
+@import "font-awesome/font-awesome";
 
 // Specific project styles, add any section specific sass modules here
 @import "layout";
-@import "blog";
-
-// Additional styles to think about
-@import "responsive";
-
-// If IE support is needed
-@import "ie";
-
-// For anything quick and dirty that needs thrown in
-@import "shame";
+// @import "blog"; // Do we need this? -Markus
