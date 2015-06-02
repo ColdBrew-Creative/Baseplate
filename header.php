@@ -30,16 +30,21 @@
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-	<link rel="stylesheet" type="text/stylesheet" href="<?= get_template_directory_uri(); ?>/library/css/foundation.css" />
 	<link rel="stylesheet" type="text/stylesheet" href="<?= get_template_directory_uri(); ?>/library/css/main.css" />
+
+	<!-- jQuery -->
+	<script src="<?= get_template_directory_uri(); ?>/library/js/jquery-1.10.1.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
 
 <body>
-	<?php wp_nav_menu(array(
-		'theme_location' => 'Main Menu',
-		'menu' => 'Main Menu',
-		'container' => 'nav',
-		'depth' => 1
-	)); ?>
+	<header>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'Main Menu',
+			'menu' => 'Main Menu',
+			'container' => 'nav',
+			'depth' => 1
+		)); ?>
+	</header>
+	<main>

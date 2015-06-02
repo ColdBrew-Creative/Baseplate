@@ -1604,6 +1604,7 @@ table {
     border-bottom: 1px solid #ccc; }
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea {
+  box-sizing: border-box;
   width: 300px;
   border: 1px solid #ccc;
   padding: 5px;
@@ -1613,19 +1614,29 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus {
     border-color: #1271db; }
 
+input[type="color"] {
+  padding: 0; }
+
 textarea {
   height: 100px; }
 
+form fieldset {
+  display: block;
+  margin-bottom: 0 0 15px;
+  border: none; }
 form .note {
-  margin-top: 5px;
-  color: #aaa; }
+  color: #aaa;
+  font-size: .8rem; }
 form .error .reason {
-  margin-top: 5px;
   color: #FF4136; }
 form .error input[type="color"], form .error input[type="date"], form .error input[type="datetime"], form .error input[type="datetime-local"], form .error input[type="email"], form .error input[type="month"], form .error input[type="number"], form .error input[type="password"], form .error input[type="search"], form .error input[type="tel"], form .error input[type="text"], form .error input[type="time"], form .error input[type="url"], form .error input[type="week"], form .error textarea {
   border-color: #FF4136; }
+form .success .reason {
+  color: #2ECC40; }
 form .success input[type="color"], form .success input[type="date"], form .success input[type="datetime"], form .success input[type="datetime-local"], form .success input[type="email"], form .success input[type="month"], form .success input[type="number"], form .success input[type="password"], form .success input[type="search"], form .success input[type="tel"], form .success input[type="text"], form .success input[type="time"], form .success input[type="url"], form .success input[type="week"], form .success textarea {
   border-color: #2ECC40; }
+form .warning .reason {
+  color: #FF851B; }
 form .warning input[type="color"], form .warning input[type="date"], form .warning input[type="datetime"], form .warning input[type="datetime-local"], form .warning input[type="email"], form .warning input[type="month"], form .warning input[type="number"], form .warning input[type="password"], form .warning input[type="search"], form .warning input[type="tel"], form .warning input[type="text"], form .warning input[type="time"], form .warning input[type="url"], form .warning input[type="week"], form .warning textarea {
   border-color: #FF851B; }
 
@@ -1637,8 +1648,8 @@ form .warning input[type="color"], form .warning input[type="date"], form .warni
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 .fa {

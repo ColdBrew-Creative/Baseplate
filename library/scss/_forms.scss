@@ -1,4 +1,5 @@
 #{$all-text-inputs} {
+	box-sizing: border-box;
 	width: 300px;
 	border: 1px solid #ccc;
 	padding: 5px;
@@ -9,22 +10,28 @@
 		border-color: $primary-color;
 	}
 }
+input[type="color"] {
+	padding: 0;
+}
 textarea {
 	height: 100px;
 }
 
 form {
-	// Notes go under the input fields
-	.note {
-		margin-top: 5px;
-		color: $subtle-color;
+	fieldset {
+		display: block;
+		margin-bottom: 0 0 15px;
+		border: none;
 	}
 
-	// Validation
+	.note {
+		color: $subtle-color;
+		font-size: .8rem;
+	}
+
+	// Validation styles
 	.error {
-		// Validation reason
 		.reason {
-			margin-top: 5px;
 			color: $bad-color;
 		}
 		#{$all-text-inputs} {
@@ -33,12 +40,18 @@ form {
 	}
 
 	.success {
+		.reason {
+			color: $good-color;
+		}
 		#{$all-text-inputs} {
 			border-color: $good-color;
 		}
 	}
 
 	.warning {
+		.reason {
+			color: $warning-color;
+		}
 		#{$all-text-inputs} {
 			border-color: $warning-color;
 		}
