@@ -15,8 +15,8 @@ nav {
 }
 
 /* FOR TESTING PURPOSES */
-@mixin test-content($name, $val, $prop) {
-	#{$prop}: #{$val};
+@mixin test-content($name, $val, $prop: false) {
+	@if $prop { #{$prop}: #{$val}; }
 	&::before { content: "#{$name}: #{$val}"; }
 }
 @mixin test-color($name, $val) {
@@ -33,7 +33,7 @@ nav {
 	#rem-small { @include test-content("$rem-small", $rem-small, font-size); }
 	#rem-medium { @include test-content("$rem-medium", $rem-medium, font-size); }
 	#rem-large { @include test-content("$rem-large", $rem-large, font-size); }
-	.test-color { display: block; &::after { display: inline-block; } }
+	.test-color::after { display: inline-block; }
 	#primary-color { @include test-color("$primary-color", $primary-color); }
 	#secondary-color { @include test-color("$secondary-color", $secondary-color); }
 	#tertiary-color { @include test-color("$tertiary-color", $tertiary-color); }
@@ -41,4 +41,9 @@ nav {
 	#success-color { @include test-color("$success-color", $success-color); }
 	#warning-color { @include test-color("$warning-color", $warning-color); }
 	#info-color { @include test-color("$info-color", $info-color); }
+	#breakpoint-small { @include test-content("$small-range", $small-range); }
+	#breakpoint-medium { @include test-content("$medium-range", $medium-range); }
+	#breakpoint-large { @include test-content("$large-range", $large-range); }
+	#breakpoint-xlarge { @include test-content("$xlarge-range", $xlarge-range); }
+	#breakpoint-xxlarge { @include test-content("$xxlarge-range", $xxlarge-range); }
 }

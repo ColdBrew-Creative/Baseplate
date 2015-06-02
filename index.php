@@ -36,6 +36,14 @@
 			<span id="warning-color" class="test-color"></span>
 			<span id="info-color" class="test-color"></span>
 
+			<h4>Responsive Breakpoints</h4>
+
+			<span id="breakpoint-small"></span>
+			<span id="breakpoint-medium"></span>
+			<span id="breakpoint-large"></span>
+			<span id="breakpoint-xlarge"></span>
+			<span id="breakpoint-xxlarge"></span>
+
 		</div>
 	</section>
 

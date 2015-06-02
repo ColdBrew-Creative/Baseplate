@@ -3485,10 +3485,8 @@ nav {
   font-size: 20px; }
   #scss-settings #rem-large::before {
     content: "$rem-large: 20px"; }
-#scss-settings .test-color {
-  display: block; }
-  #scss-settings .test-color::after {
-    display: inline-block; }
+#scss-settings .test-color::after {
+  display: inline-block; }
 #scss-settings #primary-color {
   color: #1271db; }
   #scss-settings #primary-color::before {
@@ -3573,5 +3571,15 @@ nav {
     width: 300px;
     height: 20px;
     background-color: #aaa; }
+#scss-settings #breakpoint-small::before {
+  content: "$small-range: 0, 40em"; }
+#scss-settings #breakpoint-medium::before {
+  content: "$medium-range: 40.063em, 64em"; }
+#scss-settings #breakpoint-large::before {
+  content: "$large-range: 64.063em, 90em"; }
+#scss-settings #breakpoint-xlarge::before {
+  content: "$xlarge-range: 90.063em, 120em"; }
+#scss-settings #breakpoint-xxlarge::before {
+  content: "$xxlarge-range: 120.063em, 99999999em"; }
 
 /*# sourceMappingURL=main.css.map */
