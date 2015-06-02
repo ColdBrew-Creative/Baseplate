@@ -31,10 +31,10 @@
 			<span id="secondary-color" class="test-color"></span>
 			<span id="tertiary-color" class="test-color"></span>
 			<br />
-			<span id="bad-color" class="test-color"></span>
-			<span id="good-color" class="test-color"></span>
+			<span id="alert-color" class="test-color"></span>
+			<span id="success-color" class="test-color"></span>
 			<span id="warning-color" class="test-color"></span>
-			<span id="subtle-color" class="test-color"></span>
+			<span id="info-color" class="test-color"></span>
 
 		</div>
 	</section>

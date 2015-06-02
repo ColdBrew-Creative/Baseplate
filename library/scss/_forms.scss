@@ -25,26 +25,26 @@ form {
 	}
 
 	.note {
-		color: $subtle-color;
+		color: $info-color;
 		font-size: .8rem;
 	}
 
 	// Validation styles
 	.error {
 		.reason {
-			color: $bad-color;
+			color: $alert-color;
 		}
 		#{$all-text-inputs} {
-			border-color: $bad-color;
+			border-color: $alert-color;
 		}
 	}
 
 	.success {
 		.reason {
-			color: $good-color;
+			color: $success-color;
 		}
 		#{$all-text-inputs} {
-			border-color: $good-color;
+			border-color: $success-color;
 		}
 	}
 

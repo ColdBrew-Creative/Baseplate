@@ -3525,26 +3525,26 @@ nav {
     width: 300px;
     height: 20px;
     background-color: #aaa; }
-#scss-settings #bad-color {
+#scss-settings #alert-color {
   color: #FF4136; }
-  #scss-settings #bad-color::before {
-    content: "$bad-color: #FF4136"; }
-  #scss-settings #bad-color::before {
+  #scss-settings #alert-color::before {
+    content: "$alert-color: #FF4136"; }
+  #scss-settings #alert-color::before {
     display: inline-block;
     width: 350px; }
-  #scss-settings #bad-color::after {
+  #scss-settings #alert-color::after {
     content: "";
     width: 300px;
     height: 20px;
     background-color: #FF4136; }
-#scss-settings #good-color {
+#scss-settings #success-color {
   color: #2ECC40; }
-  #scss-settings #good-color::before {
-    content: "$good-color: #2ECC40"; }
-  #scss-settings #good-color::before {
+  #scss-settings #success-color::before {
+    content: "$success-color: #2ECC40"; }
+  #scss-settings #success-color::before {
     display: inline-block;
     width: 350px; }
-  #scss-settings #good-color::after {
+  #scss-settings #success-color::after {
     content: "";
     width: 300px;
     height: 20px;
@@ -3561,14 +3561,14 @@ nav {
     width: 300px;
     height: 20px;
     background-color: #FF851B; }
-#scss-settings #subtle-color {
+#scss-settings #info-color {
   color: #aaa; }
-  #scss-settings #subtle-color::before {
-    content: "$subtle-color: #aaa"; }
-  #scss-settings #subtle-color::before {
+  #scss-settings #info-color::before {
+    content: "$info-color: #aaa"; }
+  #scss-settings #info-color::before {
     display: inline-block;
     width: 350px; }
-  #scss-settings #subtle-color::after {
+  #scss-settings #info-color::after {
     content: "";
     width: 300px;
     height: 20px;

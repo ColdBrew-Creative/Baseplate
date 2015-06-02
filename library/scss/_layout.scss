@@ -37,8 +37,8 @@ nav {
 	#primary-color { @include test-color("$primary-color", $primary-color); }
 	#secondary-color { @include test-color("$secondary-color", $secondary-color); }
 	#tertiary-color { @include test-color("$tertiary-color", $tertiary-color); }
-	#bad-color { @include test-color("$bad-color", $bad-color); }
-	#good-color { @include test-color("$good-color", $good-color); }
+	#alert-color { @include test-color("$alert-color", $alert-color); }
+	#success-color { @include test-color("$success-color", $success-color); }
 	#warning-color { @include test-color("$warning-color", $warning-color); }
-	#subtle-color { @include test-color("$subtle-color", $subtle-color); }
+	#info-color { @include test-color("$info-color", $info-color); }
 }
