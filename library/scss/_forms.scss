@@ -1,57 +1,61 @@
 /* Styles for form elements */
 
-label{
-	display:block;
-	margin-bottom:5px;
-}
-input[type=text],input[type=email],input[type=phone],input[type=password],input[type=number],input[type=search], textarea{
-	@include box-shadow(inset 0 1px 2px rgba(0,0,0,.05));
-	@include border-radius($btn-br);
-	padding:5px;
-	border:1px solid #ccc;
-	outline:none;
-	height: $line-height;
-	width:300px;
-	&:focus{
-		border-color:$primary-color;
-	}
-	&.full-width{
-		width:100%;
+#{$all-text-inputs} {
+	box-sizing: border-box;
+	width: 300px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+	border-radius: 5px;
+	&:focus {
+		border-color: $primary-color;
 	}
 }
-textarea{
-	height:$line-height*3;
+input[type="color"] {
+	padding: 0;
+}
+textarea {
+	height: 100px;
 }
 
-form{
-	margin-bottom:$padding;
-
-	// Wrap each form input/element in a field div
-	.field{
-		margin-bottom:$padding/2;
+form {
+	fieldset {
+		display: block;
+		margin-bottom: 0 0 15px;
+		border: none;
 	}
 
-	// Notes go under the input fields
-	.note{
-		margin-top:5px;
-		color:$subtle-color;
+	.note {
+		color: $info-color;
+		font-size: .8rem;
 	}
 
-	// Required label
-	.req{
-		font-style: italic;
-	}
-
-	// Validation, add error class to the item div
-	.error{
-
-		// Validation reason
-		.reason{
-			margin-top:5px;
-			color:$bad-color;
+	// Validation styles
+	.error {
+		.reason {
+			color: $alert-color;
 		}
-		input[type=text],input[type=email],input[type=phone],input[type=password],input[type=number],input[type=search], textarea{
-			border-color:$bad-color;
+		#{$all-text-inputs} {
+			border-color: $alert-color;
+		}
+	}
+
+	.success {
+		.reason {
+			color: $success-color;
+		}
+		#{$all-text-inputs} {
+			border-color: $success-color;
+		}
+	}
+
+	.warning {
+		.reason {
+			color: $warning-color;
+		}
+		#{$all-text-inputs} {
+			border-color: $warning-color;
 		}
 	}
 }
