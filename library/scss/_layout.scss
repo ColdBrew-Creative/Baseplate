@@ -13,3 +13,32 @@ nav {
 		}
 	}
 }
+
+/* FOR TESTING PURPOSES */
+@mixin test-content($name, $val, $prop) {
+	#{$prop}: #{$val};
+	&::before { content: "#{$name}: #{$val}"; }
+}
+@mixin test-color($name, $val) {
+	@include test-content($name, $val, color);
+	&::before { display: inline-block; width: 350px; }
+	&::after { content: ""; width: 300px; height: 20px; background-color: $val; }
+}
+#scss-settings {
+	span { display: block; }
+	#font-base { @include test-content("$font-base (default font)", $font-base, font-family); }
+	#font-header { @include test-content("$font-header (<h1>-<h6>)", $font-header, font-family); }
+	#font-mono { @include test-content("$font-mono", $font-mono, font-family); }
+	#font-blockquote { @include test-content("$font-quote", $font-quote, font-family); }
+	#rem-small { @include test-content("$rem-small", $rem-small, font-size); }
+	#rem-medium { @include test-content("$rem-medium", $rem-medium, font-size); }
+	#rem-large { @include test-content("$rem-large", $rem-large, font-size); }
+	.test-color { display: block; &::after { display: inline-block; } }
+	#primary-color { @include test-color("$primary-color", $primary-color); }
+	#secondary-color { @include test-color("$secondary-color", $secondary-color); }
+	#tertiary-color { @include test-color("$tertiary-color", $tertiary-color); }
+	#bad-color { @include test-color("$bad-color", $bad-color); }
+	#good-color { @include test-color("$good-color", $good-color); }
+	#warning-color { @include test-color("$warning-color", $warning-color); }
+	#subtle-color { @include test-color("$subtle-color", $subtle-color); }
+}

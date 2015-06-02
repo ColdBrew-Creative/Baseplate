@@ -1551,7 +1551,7 @@ html, body {
     html, body {
       font-size: 20px; } }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin: 0 0 25px; }
 
@@ -1565,9 +1565,12 @@ h3 {
   font-size: 1.8rem; }
 
 h4 {
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 h5 {
+  font-size: 1.2rem; }
+
+h6 {
   font-size: 1rem; }
 
 p {
@@ -3450,5 +3453,125 @@ nav {
       padding: 20px;
       color: #fff;
       text-decoration: none; }
+
+/* FOR TESTING PURPOSES */
+#scss-settings span {
+  display: block; }
+#scss-settings #font-base {
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif; }
+  #scss-settings #font-base::before {
+    content: "$font-base (default font): Open Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif"; }
+#scss-settings #font-header {
+  font-family: Lato, Open Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif; }
+  #scss-settings #font-header::before {
+    content: "$font-header (<h1>-<h6>): Lato, Open Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif"; }
+#scss-settings #font-mono {
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace; }
+  #scss-settings #font-mono::before {
+    content: "$font-mono: Monaco, Menlo, Consolas, Courier New, monospace"; }
+#scss-settings #font-blockquote {
+  font-family: Georgia, Times, Times New Roman, serif; }
+  #scss-settings #font-blockquote::before {
+    content: "$font-quote: Georgia, Times, Times New Roman, serif"; }
+#scss-settings #rem-small {
+  font-size: 14px; }
+  #scss-settings #rem-small::before {
+    content: "$rem-small: 14px"; }
+#scss-settings #rem-medium {
+  font-size: 16px; }
+  #scss-settings #rem-medium::before {
+    content: "$rem-medium: 16px"; }
+#scss-settings #rem-large {
+  font-size: 20px; }
+  #scss-settings #rem-large::before {
+    content: "$rem-large: 20px"; }
+#scss-settings .test-color {
+  display: block; }
+  #scss-settings .test-color::after {
+    display: inline-block; }
+#scss-settings #primary-color {
+  color: #1271db; }
+  #scss-settings #primary-color::before {
+    content: "$primary-color: #1271db"; }
+  #scss-settings #primary-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #primary-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #1271db; }
+#scss-settings #secondary-color {
+  color: #233E5B; }
+  #scss-settings #secondary-color::before {
+    content: "$secondary-color: #233E5B"; }
+  #scss-settings #secondary-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #secondary-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #233E5B; }
+#scss-settings #tertiary-color {
+  color: #aaa; }
+  #scss-settings #tertiary-color::before {
+    content: "$tertiary-color: #aaa"; }
+  #scss-settings #tertiary-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #tertiary-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #aaa; }
+#scss-settings #bad-color {
+  color: #FF4136; }
+  #scss-settings #bad-color::before {
+    content: "$bad-color: #FF4136"; }
+  #scss-settings #bad-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #bad-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #FF4136; }
+#scss-settings #good-color {
+  color: #2ECC40; }
+  #scss-settings #good-color::before {
+    content: "$good-color: #2ECC40"; }
+  #scss-settings #good-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #good-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #2ECC40; }
+#scss-settings #warning-color {
+  color: #FF851B; }
+  #scss-settings #warning-color::before {
+    content: "$warning-color: #FF851B"; }
+  #scss-settings #warning-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #warning-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #FF851B; }
+#scss-settings #subtle-color {
+  color: #aaa; }
+  #scss-settings #subtle-color::before {
+    content: "$subtle-color: #aaa"; }
+  #scss-settings #subtle-color::before {
+    display: inline-block;
+    width: 350px; }
+  #scss-settings #subtle-color::after {
+    content: "";
+    width: 300px;
+    height: 20px;
+    background-color: #aaa; }
 
 /*# sourceMappingURL=main.css.map */

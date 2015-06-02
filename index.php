@@ -9,6 +9,38 @@
 
 	<hr />
 
+	<section id="scss-settings"><!-- SCSS settings -->
+		<div class="row">
+
+			<h2>SCSS Variables</h2>
+
+			<h4>Typography</h4>
+
+			<span id="font-base"></span>
+			<span id="font-header"></span>
+			<span id="font-mono"></span>
+			<span id="font-blockquote"></span>
+			<br />
+			<span id="rem-small"></span>
+			<span id="rem-medium"></span>
+			<span id="rem-large"></span>
+
+			<h4>Colors</h4>
+
+			<span id="primary-color" class="test-color"></span>
+			<span id="secondary-color" class="test-color"></span>
+			<span id="tertiary-color" class="test-color"></span>
+			<br />
+			<span id="bad-color" class="test-color"></span>
+			<span id="good-color" class="test-color"></span>
+			<span id="warning-color" class="test-color"></span>
+			<span id="subtle-color" class="test-color"></span>
+
+		</div>
+	</section>
+
+	<hr />
+
 	<section><!-- Basic text stylings -->
 		<div class="row">
 
@@ -81,7 +113,7 @@ function FisherYates(array) {
 
 	<hr />
 
-	<section>
+	<section><!-- Tables -->
 		<div class="row">
 
 			<h2>Tables</h2>
@@ -125,7 +157,7 @@ function FisherYates(array) {
 
 	<hr />
 
-	<section>
+	<section><!-- Form elements -->
 		<div class="row">
 
 			<h2>Forms</h2>
@@ -209,7 +241,7 @@ function FisherYates(array) {
 					<input type="tel" />
 					<p class="note">NO SUPPORT</p>
 				</fieldset>
-				<fieldset>
+				<fieldset class="form-helper">
 					<legend>Textarea</legend>
 					<textarea>Some default text</textarea>
 				</fieldset>
@@ -333,7 +365,7 @@ function FisherYates(array) {
 
 	<hr />
 
-	<section>
+	<section><!-- Images -->
 		<div class="row">
 
 			<h2>Images</h2>
