@@ -1,66 +1,27 @@
-	<div class="row">
-		<hr>
-		<footer itemscope itemtype="http://schema.org/WPFooter">
-			<div class="row">
-
-				<div class="medium-6 large-3 columns">
-					<h1>ABOUT</h1>
-					<p>We do cool things.</p>
-					<a class="footer-icon" href="">
-						<i class="fa fa-facebook-official fa-2x"></i>
-					</a>
-				</div>
-
-				<div class="medium-6 large-3 columns">
-					<h1>Title 2</h1>
-					<p>A description</p>
-						<ul>
-							<li>Pier 1/2</li>
-							<li>Pier 1</li>
-							<li>Pier 39</li>
-							<li>Pier 40</li>
-						</ul>
-				</div>
-
-				<div class="medium-6 large-3 columns">
-					<h1>Title 3</h1>
-					<?php
-						// Fetch 5 recent blog posts
-						$footerquery = new WP_Query('showposts=5');
-						if ($footerquery->have_posts()) {
-							while ($footerquery->have_posts()) {
-								$footerquery->the_post(); ?>
-								<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-							<?php }
-						}
-						// Display message if no posts exist
-						else { ?>
-							<p><?php _e('Add some blog posts!'); ?></p>
-						<?php }
-					?>
-				</div>
-
-				<div class="medium-6 large-3 columns">
-					<h1>CONTACT</h1>
-					<p class="bold">HOURS</p><p>9 to 5:30 Mon-Sun</p>
-					<p class="bold">PHONE</p><p>1-987-654-3210</p>
-					<p class="bold">EMAIL</p><p>you@domain.com</p>
-				</div>
-
+	</main>
+	<footer>
+		<hr />
+		<div class="row">
+			<div class="medium-6 columns">
+				<h3>Footer</h3>
+				<ul>
+					<li><a href="#">Rice Cake</a></li>
+					<li><a href="#">Swiss Cheese</a></li>
+					<li><a href="#">Ice Pop</a></li>
+					<li><a href="#">Peanut Butter Fudge</a></li>
+				</ul>
 			</div>
-		</footer>
-	</div>
+			<div class="medium-6 columns">
+				<h3>Some Text</h3>
+				<p>Cracked-wheat bread New England clam chowder ham and veggies biscuit sandwich chamomile herbal tea bag Oreo fudge cremes tropical trail mix Propel Zero enhanced water Madanga milk chocolate bar.</p>
+			</div>
+		</div>
+	</footer>
 
-	<!-- jQuery -->
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
-
-	<!-- Google Analytics goes in here: -->
 	<?php if(!is_user_logged_in()) { ?>
-
 		<!-- Google Analytics CODE GOES HERE -->
-
 	<?php } ?>
 
-	<?php wp_footer(); ?><!-- all scripts before this line -->
+	<?php wp_footer(); ?>
 </body>
 </html>
