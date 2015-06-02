@@ -3430,4 +3430,25 @@ form .warning input[type="color"], form .warning input[type="date"], form .warni
 .fa-medium:before {
   content: ""; }
 
+nav {
+  background-color: #1271db; }
+  nav ul {
+    margin: 0 auto 1.0625rem auto;
+    margin-left: -1.375rem;
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+    nav ul > li {
+      list-style: none;
+      float: left;
+      margin-left: 1.375rem;
+      display: block; }
+      nav ul > li > * {
+        display: block; }
+    nav ul a {
+      padding: 20px;
+      color: #fff;
+      text-decoration: none; }
+
 /*# sourceMappingURL=main.css.map */

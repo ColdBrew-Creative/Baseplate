@@ -1,1 +1,15 @@
 // Main layout styles go here
+
+nav {
+	background-color: $primary-color;
+
+	ul {
+		@include inline-list;
+
+		a {
+			padding: 20px;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
