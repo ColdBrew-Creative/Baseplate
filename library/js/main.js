@@ -1,3 +1,6 @@
-$(document).ready(function() {
-	
+$(function() {
+	"use strict";
+
+	// Code stuff!
+
 });

@@ -4,28 +4,56 @@
  * Template Name: Contact Page
  */
 
-get_header(); ?>
+?>
+
+<?php get_header(); ?>
+
+	<section>
+		<div class="row">
+			<div class="medium-8 medium-centered columns">	
+				<div id="success">
+					<p>Your message was sent successfully! We'll be in touch soon.</p>
+				</div>
+
+				<form name="myForm" id="myForm" action="javascript:sendEmail();">
+					<fieldset>
+						<legend>Your Name</legend>
+						<input type="text" id="name" />
+					</fieldset>
+					<fieldset>
+						<legend>Your Email</legend>
+						<input type="email" id="email" />
+					</fieldset>
+					<fieldset>
+						<legend>How can we help you?</legend>
+						<textarea id="message"></textarea>
+					</fieldset>
+					<input type="submit" />
+				</form>
+			</div>
+		</div>
+	</section>
 
 	<script>
 		function sendEmail() {
-			var email = document.getElementById('email').value;
-			var name = document.getElementById('name').value;
-			var message = document.getElementById('message').value;
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var message = document.getElementById("message").value;
 
 			if (name == "") {
 				alert("Sorry, we didn't catch your name?")
-				document.myForm.name.focus();
-				return false;
+				document.getElementById("name").focus();
+				return;
 			}
 			if (email == "") {
 				alert("How can we email you?")
-				document.myForm.email.focus();
-				return false;
+				document.getElementById("email").focus();
+				return;
 			}
 			if (message == "") {
 				alert("What did you want to say?")
-				document.myForm.message.focus();
-				return false;
+				document.getElementById("message").focus();
+				return;
 			}
 
 			$.ajax({
@@ -38,49 +66,13 @@ get_header(); ?>
 					document.getElementById('message').value = "";
 
 					// send that lovely message the viewer had to say
-					$("input[type=submit]", "form").attr('disabled', 'disabled');
+					$("input[type=submit]", "form").attr("disabled", "disabled");
 					$("#myForm").addClass("message-sent");
 					$("#success").show();
-					$("#myForm").fadeOut('medium');
+					$("#myForm").fadeOut("medium");
 				}
 			});
 		}
 	</script>
-
-	<!-- Start the contact shenanigans -->
-	<div class="row white content">
-		<div class="large-8 large-centered medium-8 medium-centered columns">	
-			<div id="success">
-				<p>Your message was sent successfully! We'll be in touch soon.</p>
-			</div>
-				
-			<form name="myForm" id="myForm" action="javascript:sendEmail();" class="animated fadeIn">
-				<label>
-					Your Name
-					<input type="name" id="name">
-				</label>
-				<label>
-					Your Email
-					<input type="email" id="email">
-				</label>
-				<label>
-					How can we help you?
-					<textarea type="text" id="message" cols="10" rows="7"></textarea>
-				</label>
-				<input type="submit" class="btn btn-alt">
-			</form>
-		</div>
-			
-		<!--<div class="large-4 medium-4 columns">
-			<h3>Let's get in touch!</h3>
-			<p>Fill out the quick form on the left and we'll respond within 48 hours.</p>
-			<p>Some helpful information you might include about your project:</p>
-			<ul>
-				<li>Deadline</li>
-				<li>Price Range</li>
-				<li>Project Description</li>
-			</ul>
-		</div>-->
-	</div>
 
 <?php get_footer(); ?>

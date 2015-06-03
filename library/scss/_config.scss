@@ -21,11 +21,11 @@ $grey:   #aaa;
 $black:  #111;
 
 // Color variables
-$primary-color: #1271db;
+$primary-color:   #1271db;
 $secondary-color: #233E5B;
-$tertiary-color: #aaa;
+$tertiary-color:  #aaa;
 
-$alert-color: $red; // Bad color for errors, validation etc.
-$success-color: $green; // Good color for success etc.
-$warning-color: $orange; // Warning color for almost errors
-$info-color: $grey; // Subtle color for subtle text
+$alert-color:   $red;    // Bad color for errors, validation etc.
+$success-color: $green;  // Good color for success etc.
+$warning-color: $orange; // Warning color for almost errors/important text
+$info-color:    $grey;   // Subtle color for subtle text

@@ -3459,6 +3459,16 @@ form .warning input[type="color"], form .warning input[type="date"], form .warni
 *** 6. Specific page #2 ***
 
 */
+/* ============= 1. General =============== */
+section {
+  max-width: 100%;
+  overflow: hidden; }
+
+.row {
+  padding-right: 1em;
+  padding-left: 1em; }
+
+/* ============= 2. Navigation =============== */
 nav {
   background-color: #1271db; }
   nav ul {
@@ -3480,6 +3490,11 @@ nav {
       color: #fff;
       text-decoration: none; }
 
+/* most of your styles go here */
+/*********************
+OPTIONAL
+Delete the // comment in front of an @import style to activate it
+*********************/
 /* FOR TESTING PURPOSES */
 #scss-settings span {
   display: block; }
@@ -3607,11 +3622,5 @@ nav {
   content: "$xlarge-range: 90.063em, 120em"; }
 #scss-settings #breakpoint-xxlarge::before {
   content: "$xxlarge-range: 120.063em, 99999999em"; }
-
-/* most of your styles go here */
-/*********************
-OPTIONAL
-Delete the // comment in front of an @import style to activate it
-*********************/
 
 /*# sourceMappingURL=main.css.map */

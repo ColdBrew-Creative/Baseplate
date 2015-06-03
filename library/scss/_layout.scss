@@ -11,6 +11,20 @@
 
 */
 
+/* ============= 1. General =============== */
+
+section {
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.row {
+	@include padding(null 1em null 1em);
+}
+
+
+/* ============= 2. Navigation =============== */
+
 nav {
 	background-color: $primary-color;
 
@@ -23,38 +37,4 @@ nav {
 			text-decoration: none;
 		}
 	}
-}
-
-/* FOR TESTING PURPOSES */
-@mixin test-content($name, $val, $prop: false) {
-	@if $prop { #{$prop}: #{$val}; }
-	&::before { content: "#{$name}: #{$val}"; }
-}
-@mixin test-color($name, $val) {
-	@include test-content($name, $val, color);
-	&::before { display: inline-block; width: 350px; }
-	&::after { content: ""; width: 300px; height: 20px; background-color: $val; }
-}
-#scss-settings {
-	span { display: block; }
-	#font-base { @include test-content("$font-base (default font)", $font-base, font-family); }
-	#font-header { @include test-content("$font-header (<h1>-<h6>)", $font-header, font-family); }
-	#font-mono { @include test-content("$font-mono", $font-mono, font-family); }
-	#font-blockquote { @include test-content("$font-quote", $font-quote, font-family); }
-	#rem-small { @include test-content("$rem-small", $rem-small, font-size); }
-	#rem-medium { @include test-content("$rem-medium", $rem-medium, font-size); }
-	#rem-large { @include test-content("$rem-large", $rem-large, font-size); }
-	.test-color::after { display: inline-block; }
-	#primary-color { @include test-color("$primary-color", $primary-color); }
-	#secondary-color { @include test-color("$secondary-color", $secondary-color); }
-	#tertiary-color { @include test-color("$tertiary-color", $tertiary-color); }
-	#alert-color { @include test-color("$alert-color", $alert-color); }
-	#success-color { @include test-color("$success-color", $success-color); }
-	#warning-color { @include test-color("$warning-color", $warning-color); }
-	#info-color { @include test-color("$info-color", $info-color); }
-	#breakpoint-small { @include test-content("$small-range", $small-range); }
-	#breakpoint-medium { @include test-content("$medium-range", $medium-range); }
-	#breakpoint-large { @include test-content("$large-range", $large-range); }
-	#breakpoint-xlarge { @include test-content("$xlarge-range", $xlarge-range); }
-	#breakpoint-xxlarge { @include test-content("$xxlarge-range", $xxlarge-range); }
 }

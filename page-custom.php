@@ -13,7 +13,8 @@
  * For more info: http://codex.wordpress.org/Page_Templates
  */
 
-get_header(); ?>
+?>
+<?php get_header(); ?>
 
 	<div id="content">
 		<div id="inner-content" class="wrap cf">

@@ -18,6 +18,9 @@
 		</div>
 	</footer>
 
+	<!-- .js files -->
+	<script src="<?= get_template_directory_uri(); ?>/library/js/main.js"></script>
+
 	<?php if(!is_user_logged_in()) { ?>
 		<!-- Google Analytics CODE GOES HERE -->
 	<?php } ?>

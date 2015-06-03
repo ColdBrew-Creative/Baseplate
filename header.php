@@ -30,10 +30,11 @@
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+	<!-- Load CSS Files -->
 	<link rel="stylesheet" type="text/stylesheet" href="<?= get_template_directory_uri(); ?>/library/css/main.css" />
 
 	<!-- jQuery -->
-	<script src="<?= get_template_directory_uri(); ?>/library/js/jquery-1.10.1.min.js"></script>
+	<script src="<?= get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>

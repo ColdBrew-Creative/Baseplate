@@ -455,8 +455,6 @@ function FisherYates(array) {
 
 			<p>More icons: <a href="http://fontawesome.github.io/Font-Awesome/cheatsheet/">http://fontawesome.github.io/Font-Awesome/cheatsheet/</a></p>
 
-		</section>
-
 		</div>
 	</section>
 
