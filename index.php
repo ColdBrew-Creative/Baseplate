@@ -512,50 +512,6 @@
 				</div>
 			</div>
 
-			<hr/>
-
-<<<<<<< Updated upstream
-	<hr />
-
-	<section><!-- Miscellaneous -->
-		<div class="row">
-
-			<h2>Other HTML5 Elements</h2>
-
-			<h4>Details and Summary</h4>
-			<details>
-				<summary>This is a delicious webpage</summary>
-				<p>It makes me very hungry.</p>
-				<p>And very happy.</p>
-			</details>
-
-			<h4>Meter (Firefox, Chrome, Safari, Opera)</h4>
-			<meter value="65" min="0" max="100">65 out of 100</meter>
-
-			<h4>Progress</h4>
-			<progress value="50" max="100"></progress>
-
-			<h2>Icons</h2>
-
-			<i class="fa fa-cog fa-3x"></i>
-			<i class="fa fa-github-alt fa-rotate-90"></i>
-			<i class="fa fa-apple fa-2x"></i>
-			<i class="fa fa-cloud fa-border fa-4x"></i>
-			<i class="fa fa-comment"></i>
-			<i class="fa fa-star"></i>
-			<i class="fa fa-gamepad fa-3x fa-spin"></i>
-			<br />
-			<i class="fa fa-camera-retro"></i> fa
-			<i class="fa fa-camera-retro fa-lg"></i> fa-lg
-			<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-			<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-			<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-			<i class="fa fa-camera-retro fa-5x"></i> fa-5x
-
-			<p>More icons: <a href="http://fontawesome.github.io/Font-Awesome/cheatsheet/">http://fontawesome.github.io/Font-Awesome/cheatsheet/</a></p>
-=======
->>>>>>> Stashed changes
-
 		</div>
 	</section>
 

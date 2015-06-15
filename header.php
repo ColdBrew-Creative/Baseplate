@@ -29,13 +29,9 @@
 	<meta name="msapplication-TileImage" content="<?= get_template_directory_uri(); ?>/library/img/win8-tile-icon.png" />
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-<<<<<<< Updated upstream
+	
 	<!-- Load CSS Files -->
-	<link rel="stylesheet" type="text/stylesheet" href="<?= get_template_directory_uri(); ?>/library/css/main.css" />
-=======
 	<link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri(); ?>/library/css/main.css" />
->>>>>>> Stashed changes
 
 	<!-- jQuery -->
 	<script src="<?= get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
