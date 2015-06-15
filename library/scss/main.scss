@@ -43,6 +43,7 @@ Delete the // comment in front of an @import style to activate it
 
 // @import "blog"; /* OPTIONAL styles for blog template */
 // @import "media"; /* OPTIONAL styles for media elements */
+<<<<<<< Updated upstream
 
 
 
@@ -80,3 +81,6 @@ Delete the // comment in front of an @import style to activate it
 	#breakpoint-xlarge { @include test-content("$xlarge-range", $xlarge-range); }
 	#breakpoint-xxlarge { @include test-content("$xxlarge-range", $xxlarge-range); }
 }
+=======
+@import "misc";
+>>>>>>> Stashed changes
