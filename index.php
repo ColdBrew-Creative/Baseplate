@@ -380,36 +380,36 @@ function FisherYates(array) {
 
 			<p>Example using picture element. See <a href="http://caniuse.com/#feat=picture">http://caniuse.com/#feat=picture</a></p>
 			<picture>
-				<source media="(min-width: 1000px)" srcset="<?= get_template_directory_uri(); ?>/library/img/cat@2x.jpg" />
-				<source media="(min-width: 640px)" srcset="<?= get_template_directory_uri(); ?>/library/img/cat.jpg" />
-				<img src="<?= get_template_directory_uri(); ?>/library/img/cat@2x.jpg" alt="Cat" />
+				<source media="(min-width: 1000px)" srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg" />
+				<source media="(min-width: 640px)" srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg" />
+				<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg" alt="Cat" />
 			</picture>
 
 			<p>Examples using srcset</p>
 			<div class="row">
 				<div class="large-2 medium-2 columns">
-					<img src="<?= get_template_directory_uri(); ?>/library/img/cat.jpg"
+					<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
 					     alt="Cat"
-					     srcset="<?= get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?= get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+					     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
 					     sizes="(min-width:480px) 100vw, 50vw" />
 				</div>
 				<div class="large-4 medium-4 columns">
-					<img src="<?= get_template_directory_uri(); ?>/library/img/cat.jpg"
+					<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
 					     alt="Cat"
-					     srcset="<?= get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?= get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+					     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
 					     sizes="(min-width:480px) 100vw, 50vw" />
 				</div>
 				<div class="large-6 medium-6 columns">
-					<img src="<?= get_template_directory_uri(); ?>/library/img/cat.jpg"
+					<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
 					     alt="Cat"
-					     srcset="<?= get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?= get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+					     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
 					     sizes="(min-width:480px) 100vw, 50vw" />
 				</div>
 			</div>
 
 			<p>Example using figure</p>
 			<figure>
-				<img src="<?= get_template_directory_uri(); ?>/library/img/cat.jpg" alt="Cat" style="height:200px" />
+				<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg" alt="Cat" style="height:200px" />
 				<figcaption>This is the figure caption for the cat</figcaption>
 			</figure>
 

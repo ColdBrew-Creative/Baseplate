@@ -21,20 +21,20 @@
 	</title>
 
 	<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-	<link rel="apple-touch-icon" href="<?= get_template_directory_uri(); ?>/library/img/apple-touch-icon.png" />
-	<link rel="icon" href="<?= get_template_directory_uri(); ?>/favicon.ico" />
-	<!--[if IE]><link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/img/apple-touch-icon.png" />
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
+	<!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
 	<?php // or, set /favicon.ico for IE10 windows ?>
 	<meta name="msapplication-TileColor" content="#123456" />
-	<meta name="msapplication-TileImage" content="<?= get_template_directory_uri(); ?>/library/img/win8-tile-icon.png" />
+	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/img/win8-tile-icon.png" />
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<!-- Load CSS Files -->
-	<link rel="stylesheet" type="text/stylesheet" href="<?= get_template_directory_uri(); ?>/library/css/main.css" />
+	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css" />
 
 	<!-- jQuery -->
-	<script src="<?= get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
