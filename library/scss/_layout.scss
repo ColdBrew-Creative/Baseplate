@@ -11,29 +11,61 @@
 
 */
 
-<<<<<<< Updated upstream
-/* ============= 1. General =============== */
 
-section {
-	max-width: 100%;
-	overflow: hidden;
+//
+//
+// 1. General
+//
+//
+
+body, html {
 }
 
-.row {
-	@include padding(null 1em null 1em);
-}
+/* Lists */
+ul {}
+
+ol {}
 
 
-/* ============= 2. Navigation =============== */
+//
+//
+// 2. Navigation
+//
+//
 
 nav {
 	background-color: $primary-color;
-=======
->>>>>>> Stashed changes
+
+	ul {
+		@include inline-list;
+
+		a {
+			padding: 20px;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
 
 
-<<<<<<< Updated upstream
-=======
+//
+//
+// 3. Footer
+//
+//
+
+footer {
+
+}
+
+
+//
+//
+// 4. Components
+//
+//
+
+
 //
 //
 // Testing
@@ -73,66 +105,3 @@ nav {
 	#breakpoint-xlarge { @include test-content("$xlarge-range", $xlarge-range); }
 	#breakpoint-xxlarge { @include test-content("$xxlarge-range", $xxlarge-range); }
 }
-
-
-//
-//
-// 1. General
-//
-//
-
-body, html {
-}
-
-/* Lists */
-ul {
-	li {}
-}
-
-ol {}
-
-
-
-//
-//
-// 2. Navigation
-//
-//
-
-nav {
-	background-color: $primary-color;
-
-	ul {
-		@include inline-list;
-
->>>>>>> Stashed changes
-		a {
-			padding: 20px;
-			color: $white;
-			text-decoration: none;
-		}
-	}
-}
-<<<<<<< Updated upstream
-=======
-
-//
-//
-// 3. Footer
-//
-//
-
-footer {
-
-}
-
-//
-//
-// 4. Components
-//
-//
-
-
-
-
->>>>>>> Stashed changes
