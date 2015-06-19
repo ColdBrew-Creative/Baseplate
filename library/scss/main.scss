@@ -1,22 +1,15 @@
-/******************************************************************
-Site Name: Your Site Name
-Author: Your Site Name
-URL: http://yoursite.com
-******************************************************************/
-
-
-/*********************
+/*
 IMPORTING PARTIALS
 These files are needed at the beginning so that we establish all
 our mixins, functions, and variables that we'll be using across
 the whole project.
-*********************/
+*/
 
 // Reset using Normalize
 @import "normalize"; /* fix browser inconsistencies */
 
 // Set variables and reusable mixins and Bourbon
-@import "config"; /* adds re-usable colors and measurements */
+@import "config"; /* adds reusable colors and measurements */
 @import "mixins"; /* adds a variety of useful Sass plugins */
 @import "bourbon/bourbon"; /* adds useful SASS mixins */
 
@@ -24,10 +17,10 @@ the whole project.
 @import "foundation/foundation"; /* add Zurb's Foundation framework (grid system, etc.) */
 
 // Import typical layout SASS modules
-@import "type";
-@import "tables";
-@import "forms";
-// @import "links"; /* Style the links and buttons */
+@import "type"; /* style the typography */
+@import "tables"; /* style tables */
+@import "forms"; /* style form elements */
+// @import "links"; /* style links and buttons */
 
 // Font Awesome icons
 @import "font-awesome/font-awesome"; /* easily use icons */
@@ -36,13 +29,250 @@ the whole project.
 @import "layout"; /* most of your styles go here */
 
 
-/*********************
+/*
 OPTIONAL
 Delete the // comment in front of an @import style to activate it
-*********************/
+*/
 
 // @import "blog"; /* OPTIONAL styles for blog template */
 // @import "media"; /* OPTIONAL styles for media elements */
+
+
+/*
+SASS TUTORIAL
+http://sass-lang.com/documentation/file.SASS_REFERENCE.html
+
+Install Sass using Ruby
+	gem install sass
+Have Sass watch over a file, and specify the output destination
+	sass --watch main.scss:main.css
+	If you feel particularly sassy, I use the following batch file (_sassy.bat) which works in /library of most of our projects
+		@echo off
+		color 0a
+		echo %~dp0
+		echo(
+		sass --watch scss:css
+Install Sass syntax highlighting in Sublime Text via Package Control https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20Sass
+	Enable Package Control
+		Open the Sublime Text console
+			ctrl+` OR View > Show Console
+		Run the following Python code
+			Sublime Text 2:
+				import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
+			Sublime Text 3:
+				import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+		Restart Sublime Text (if it didn't work, see https://packagecontrol.io/installation)
+	Install the Syntax Highlighting for Sass package
+		Open the Command Pallete
+			ctrl+shift+p (Win/Linux) OR cmd+shift+p (OSX)
+		Select Package Control: Install Package (and wait a bit)
+		Select Syntax Highlighting for Sass
+
+
+> Partials
+	Partials are prefixed with an underscore and will not generate their own .css file.
+	_partial.scss
+	@import 'partial';
+
+> CSS Compliant
+	All CSS rules and syntax work in Sass
+	CSS in a Nutshell: https://goo.gl/R5w3Oi
+
+> Nesting
+	ul {
+		list-style-type: none;
+
+		li { // equivalent to 'ul li'
+			display: block;
+		}
+	}
+
+> Parent Selector
+	.button {
+		background-color: blue;
+
+		&:hover { // .button:hover
+			background-color: red;
+		}
+		footer & { // footer .button
+			background-color: green;
+		}
+		&-black { // .button-black
+			background-color: black;
+		}
+	}
+
+> Nested Properties
+	blockquote {
+		font: {
+			family: "Times New Roman", serif; // font-family
+			style: italics; // font-style
+			size: 2rem; // font-size
+		}
+	}
+
+> Extend/Inheritance
+	Selectors can inherit from other selectors using @extend.
+	If the !optional tag will ignore @extend if it would cause an error (doesn't exist or is conflictory).
+	The % selector is similar to ./# for classes/id's, but exists for the purpose of inheritance and won't be rendered into the output css.
+	p%awesome { // This ruleset won't be rendered
+		font-weight: bold;
+	}
+	.message {
+		border: 1px solid #CCCCCC;
+		color: #333333;
+	}
+	.message-success {
+		@extend .message;
+		border-color: green;
+		p {
+			@extend %awesome;
+			@extend .something !optional; // .something doesn't exist; @extend is ignored.
+		}
+		a {
+			@extend %extreme !optional; // %extreme is defined only for p; @extend is ignored.
+		}
+	}
+
+> Variables
+	Variables' scopes are within the level of selectors they are defined in, unless given the !global flag.
+	The !default flag will set the variable if it isn't already defined.
+	$size: 15px;
+	$size: 30px !default; // $size is still 15px
+	html {
+		$color: #335544 !global;
+		background-color: $color;
+	}
+
+	Numbers: 1.2, 13, 10px
+	Strings: "foo", 'bar', baz
+	Colors: blue, #04A3F9, rgba(255, 0, 0, .5)
+	Booleans: true, false
+	Nulls: null
+	Lists (space or comma separated): 1.5em 0 2em; Helvetica, Arial, san-serif
+	Maps: (key1: value1, key2: value2)
+
+> Interpolation
+	Mainly for using variables in selectors or strings.
+	$name: foo;
+	$attr: border;
+	p.#{$name} { // p.foo
+		#{$attr}-color: blue; // border-color
+	}
+	$text: "#{$name}#{$attr}"; // "fooborder"
+
+> Operations
+	Take care that agreeeable units are in the arguments
+	Numbers and Colors: + - * / % < > <= >= == !=
+		80px / 320px * 100% == 25%
+		#010203 + #040506 == #050709 // computed piecewise
+		16px + 1em // Invalid
+		10px * 10px // 100px*px is not a CSS unit
+	Strings: + == !=
+		"Foo " + Bar == "Foo Bar"
+		sans + -serif == sans-serif
+	Booleans: and or not == !=
+
+> Mixins
+	Mixins using variables as arguments. (Also accepts lists and maps)
+	@mixin border($width, $style, $color, $radius: 0px) { // $radius uses default value of 0px if not passed
+		border: {
+			color: $color;
+			width: $width;
+			style: $style;
+		}
+		-webkit-border-radius: $radius;
+		   -moz-border-radius: $radius;
+		    -ms-border-radius: $radius;
+		        border-radius: $radius;
+	}
+	@mixin box-shadow($shadows...) { // supports var-args
+		-webkit-box-shadow: $shadows;
+		   -mox-box-shadow: $shadows;
+		        box-shadow: $shadows;
+	}
+	.box {
+		@include border(1px, solid, blue);
+		@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+	}
+	.circle {
+		@include border($width: 5px, $color: green, $style: dashed, $radius: 50%); // keyword arguments
+	}
+
+	Mixins using a Content Block
+	@mixin apply-to-main {
+		#main {
+			@content;
+		}
+	}
+	@include apply-to-main {
+		background-color: blue; // #main
+		#logo { // #main #logo
+			background-image: url(/logo.gif);
+		}
+	}
+
+> Functions
+	Supports var-args and keyword arguments similar to mixins.
+	Built in Sass functions: http://sass-lang.com/documentation/Sass/Script/Functions.html
+	$grid-width: 40px;
+	$gutter-width: 10px;
+	@function grid-width($n) {
+		@return $n * $grid-width + ($n - 1) * $gutter-width;
+	}
+	#sidebar {
+		width: grid-width(5); // 240px
+	}
+
+> Control Directives
+	All values are "truthy" except for false and null
+	The @if, @else if, and @else directives
+		p {
+			@if 1 + 1 == 2 { border: 1px solid; } // true
+			@if "cheese"   { border: 2px solid; } // true
+			@if 5 < 3      { border: 2px dotted; } // false
+			@if null       { border: 3px double; } // false
+			@if $type == ocean {
+				color: blue;
+			} @else if $type == matador {
+				color: red;
+			} @else {
+				color: black;
+			}
+		}
+	The @for directive loops (incrementally or decrementally) a variable through a range of integers.
+		@for $i from 1 through 3 {
+			.item-#{$i} { width: 2em * $i; }
+		}
+	The @each directive loops through lists or maps. Also supports multiple assignment
+		@each $animal in puma, sea-slug, egret, salamander {
+			.#{$animal}-icon {
+				background-image: url('/images/#{$animal}.png');
+			}
+		}
+		@each $animal, $color, $cursor in (puma, black, default),
+		                                  (sea-slug, blue, pointer),
+		                                  (egret, white, move) {
+			.#{$animal}-icon {
+				background-image: url('/images/#{$animal}.png');
+				border: 2px solid $color;
+				cursor: $cursor;
+			}
+		}
+	The @while directive loops while a condition is true.
+		$i: 6;
+		@while $i > 0 {
+			.item-#{$i} { width: 2em * $i; }
+			$i: $i - 2;
+		}
+
+*/
+
+
+
+
+
+
 
 
 
