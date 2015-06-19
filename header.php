@@ -29,9 +29,9 @@
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/img/win8-tile-icon.png" />
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+	
 	<!-- Load CSS Files -->
-	<link rel="stylesheet" type="text/stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css" />
 
 	<!-- jQuery -->
 	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
