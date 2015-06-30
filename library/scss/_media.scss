@@ -3,3 +3,33 @@
 img, video, audio, iframe, object {
 	max-width:100%;
 }
+
+img {
+
+  &.alignright {
+    margin:0 0 1em 1em;
+  }
+
+  &.alignleft {
+    margin:0 1em 1em 0;
+  }
+
+  &.aligncenter {
+
+  }
+
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}

@@ -392,6 +392,34 @@ function FisherYates(array) {
 			<figcaption>This is the figure caption for the cat</figcaption>
 		</figure>
 
+		<p>Examples of image alignment</p>
+		<div class="row">
+			<p>Align Left</p>
+			<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
+				     alt="Cat"
+				     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+				     sizes="(min-width:480px) 100vw, 50vw"
+				     class="alignleft" 
+				     style="height:200px" />
+		</div>
+		<div class="row">
+			<p>Align Center</p>
+			<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
+				     alt="Cat"
+				     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+				     sizes="(min-width:480px) 100vw, 50vw"
+				     class="aligncenter"
+				     style="height:200px" />
+	  </div>
+		<div class="row">
+			<p>Align Right</p>
+			<img src="<?php echo get_template_directory_uri(); ?>/library/img/cat.jpg"
+				     alt="Cat"
+				     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
+				     sizes="(min-width:480px) 100vw, 50vw"
+				     class="alignright" 
+				     style="height:200px" />
+		</div>
 	</div>
 </section>
 

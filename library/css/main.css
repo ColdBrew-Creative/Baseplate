@@ -3478,8 +3478,9 @@ form .warning input[type="color"], form .warning input[type="date"], form .warni
 *** 2. Navigation ***
 *** 3. Footer ***
 *** 4. Components ***
-*** 5. Specific page #1 ***
-*** 6. Specific page #2 ***
+*** 5. Media ***
+*** 6. Specific page #1 ***
+*** 7. Specific page #2 ***
 
 */
 /* Lists */
@@ -3503,6 +3504,22 @@ nav {
       padding: 20px;
       color: #fff;
       text-decoration: none; }
+
+img.alignright {
+  margin: 0 0 1em 1em; }
+img.alignleft {
+  margin: 0 1em 1em 0; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* FOR TESTING PURPOSES */
 #scss-settings span {
