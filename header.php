@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>
-		<?php is_front_page() ? bloginfo('description') : wp_title(''); ?> | YOUR SITE
+		<?php if(is_home()) { echo "Home"; echo " | "; echo bloginfo("name"); } else { echo wp_title(' | ','true','right'); } ?>
 	</title>
 
 	<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
