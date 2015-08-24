@@ -21,14 +21,30 @@ It can be used for a static web project as is, or you can copy the CSS folder in
 * Just the HTML/JS you need to get started; very little components with this boilerplate.
 
 ## How to Use
-This will vary depending on the framework you are using. The following is how to for a basic static website.
+This will vary depending on the framework you are using. The following is how to for a basic WordPress-based website. 
 
-### Download Baseplate
-Download and copy the baseplate files into your new project folder.
+###Setup
+Simple! Just make sure you have the following shit installed.
+
+In command line (terminal), run the following to make sure you have Node.js, NPM and Bower installed. If not, go install them. 
+`node -v`
+`npm --version`
+`bower --version`
+
+###Grunt workflow
+1. Open up a terminal window.
+2. Switch to the root directory of this project. `cd ../Baseplate/`
+3. `npm install`
+4. `grunt`
+
+What's going on up there:
+The `npm install` command installs all the dependencies in the `packages.json` file. Those get installed into the `node_modules` folder.
+
+Now, to watch our sass files for changes, all we do is enter the `grunt` command. The standard task watches for changes in the library/scss folder, compiles the scss into css, then minifies it.
 
 ### Only edit the SCSS files
 When you make changes to any of the scss files, your main.css file will be automatically updated.
-You don't edit main.css directly, compass takes care of that for you.
+You don't edit main.css directly, Grunt takes care of that for you.
 
 ## HTML
 A bare bones index.html template.
