@@ -1,0 +1,36 @@
+/*
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*/
+
+// Import our Bower components
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+// Set variables and reusable mixins and Bourbon
+@import "config"; /* adds reusable colors and measurements */
+@import "mixins"; /* adds a variety of useful Sass plugins */
+
+// Import Foundation
+@import "foundation/foundation"; /* add Zurb's Foundation framework (grid system, etc.) */
+
+// Import typical layout SASS modules
+@import "type"; /* style the typography */
+@import "tables"; /* style tables */
+@import "forms"; /* style form elements */
+// @import "links"; /* style links and buttons */
+
+// Specific project styles, add any section specific sass modules here
+@import "layout"; /* most of your styles go here */
+@import "misc";
+
+
+/*
+OPTIONAL
+Delete the // comment in front of an @import style to activate it
+*/
+
+// @import "blog"; /* OPTIONAL styles for blog template */
+// @import "media"; /* OPTIONAL styles for media elements */

@@ -31,7 +31,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<!-- Load CSS Files -->
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/library/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css" />
 
 	<!-- jQuery -->
 	<script src="<?php echo get_template_directory_uri(); ?>/library/js/jquery-1.11.3.min.js"></script>
@@ -43,9 +43,9 @@
 	<header>
 		<?php wp_nav_menu(array(
 			'theme_location' => 'Main Menu',
-			'menu' => 'Main Menu',
-			'container' => 'nav',
-			'depth' => 1
+			'menu'           => 'Main Menu',
+			'container'      => 'nav',
+			'depth'          => 1
 		)); ?>
 	</header>
 	<main>
