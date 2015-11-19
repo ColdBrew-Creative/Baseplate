@@ -3,13 +3,13 @@
   "description": "This is a bare bones WordPress theme to help you get started.",
   "main": "index.js",
   "authors": [
-    "Cold Brew Studios"
+    "Cold Brew Creative"
   ],
   "license": "ISC",
   "keywords": [
     "wordpress"
   ],
-  "homepage": "https://github.com/pillowfication/Baseplate",
+  "homepage": "https://github.com/CyberSpark/Baseplate",
   "moduleType": [],
   "ignore": [
     "**/.*",

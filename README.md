@@ -1,4 +1,4 @@
-# Baseplate: Just enough to start a new project.
+# Baseplate: Just enough to start a new WordPress project.
 
 Docs a work in progress; not completely updated right now.
 Preview: COMING SOON (maybe)
@@ -9,8 +9,6 @@ This is a bare bones HTML/CSS framework based on Foundation and Lee Munroe's <a 
 It includes a CSS reset and a bunch of minimal boilerplate styles that should come in useful for any project, including a responsive grid, typography, icons and forms.
 
 It is not as in depth as something like <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-
-It can be used for a static web project as is, or you can copy the CSS folder into an existing framework.
 
 ## Features
 * Uses SCSS partials to help structure the CSS.
@@ -44,8 +42,10 @@ Simple! Just make sure you have the following items installed.
 
 ###Workflow
 1. Start the Sublime project by opening `Baseplate.sublime-project`
-2. Open up a terminal window. (On Windows, Shift+Right Click inside the folder and select Open command window here).
+2. Open up a terminal window. 
+	* Windows: Shift+Right Click inside the folder and select Open command window here
 3. Navigate to the root directory of this project. `cd ../Baseplate`
+	* Mac Shortcut: Drag the project folder onto the Terminal icon
 4. Run `npm run watch`
 
 What's going on up there?
@@ -62,13 +62,10 @@ recompiles. Then `dist/main.css` is minified.
 When you make changes to any of the scss files, your main.css file will be automatically updated.
 You don't edit main.css directly, Grunt takes care of that for you.
 
-## HTML
-A bare bones index.html template.
-
-## CSS
+## SCSS
 * `_config.scss` Put all your variables in here e.g. colors, padding, border radius - this helps with consistency across your project.
 * `_forms.scss` Some basic form styles.
-* `_layout.scss` This is where your main styles go. I typically have header, footer, logo classes here.
+* `_layout.scss` This is where your main styles go. Typically things like header, footer, logo classes go here.
 * `_links.scss` Styles for any text links and/or buttons.
 * `_media.scss` Styles for images, video etc.
 * `_mixins.scss` Reusabled SASS mixins e.g. clearfix.
@@ -77,21 +74,16 @@ A bare bones index.html template.
 * `_type.scss` Basic styling for your typography.
 * `main.scss` This brings all the partials together.
 
-As your project grows and you need to add more styles just create new .scss files and reference them anywhere in your main.scss file.
-
-Typical files I'll end up adding include _nav.scss, _home.scss.
+As your project grows and you need to add more styles just create new .scss files (don't forget the underscore before the name) and reference them in your main.scss file. Note that the order matters, as some files rely on others. As a general practice, put the styles most important (to the user) closer to the top of main.scss.
 
 ## JavaScript ##
-* I've included some basic Javascript including the latest jQuery and the document ready function.
-* TODO: Get browserify working so we can modularize the JS when necessary
+* Use main.js for all your code that requires the document to be loaded (e.g. jQuery functions)
 
 ## Images ##
 * There is a /img folder for images.
-* For images referenced in the CSS I tend to keep them in the css/assets/ folder e.g. sp.png is a sprite I can reference.
-* Images referenced in the HTML are stored in the /img folder.
 
 ## Fonts ##
-* Currently nothing is here
+* No defaults :) 
 
 ## Further Documentation ##
 * <a href="http://foundation.zurb.com/docs/">Foundation</a>

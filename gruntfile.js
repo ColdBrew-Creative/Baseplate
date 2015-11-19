@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+		// Compile SCSS --> CSS
 		sass: {
 			dist: {
 				files: {
@@ -10,6 +11,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		// Minify CSS
 		cssmin: {
 			target: {
 				files: {
@@ -18,8 +20,42 @@ module.exports = function(grunt) {
 						'dist/css/main.css'
 					]
 				}
+			},
+			options: {
+				sourceMap: true,
+				keepSpecialComments: 1
 			}
 		},
+		// Concatenate JS plugins
+		concat: {
+			dist: {
+			  src: ['src/js/plugins/*.js'],
+			  dest: 'dist/js/plugins.js',
+			},
+		},
+		// Minify JS files
+		uglify: {
+			options: {
+				banner: '/*! Built <%= grunt.template.today("mm-dd-yyyy, h:MM:ss TT") %> */'
+			},
+			main: {
+				options: {
+					sourceMap: 'dist/js/main.js.map'
+				},
+				files: {
+					'dist/js/main.min.js': ['src/js/main.js']
+				}
+			},
+			plugins: {
+				options: {
+					sourceMap: 'dist/js/plugins.js.map'
+				},
+				files: {
+					'dist/js/plugins.min.js': ['src/js/plugins/plugins.js']
+				}
+			}
+		},
+		// Watch for changes and run tasks
 		watch: {
 			scripts: {
 				files: ['src/scss/**/*.scss'],
@@ -28,12 +64,18 @@ module.exports = function(grunt) {
 		}
 	});
 
+	/* ================== Plugins ================== */
+	// Load the plugins
+    // Make sure dependencies have 
+    // been installed in the package.json
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-newer');
 
-	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('compile-scss', ['sass', 'cssmin']);
-	grunt.registerTask('compile', ['compile-scss']);
+	grunt.registerTask('default', ['watch', 'sass', 'cssmin', 'newer:uglify']);
+	grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify']);
 
 };
