@@ -4,7 +4,7 @@
   "description": "This is a bare bones WordPress theme to help you get started.",
   "main": "index.js",
   "scripts": {
-    "initial-setup": "npm i && bower i && grunt compile"
+    "initial-setup": "npm i && bower i && grunt build"
   },
   "repository": {
     "type": "git",
