@@ -27,26 +27,26 @@ This will vary depending on the framework you are using. The following is how to
 Simple! Just make sure you have the following items installed.
 
 1. Make sure you have installed Node.js, Git, and Ruby
-* `node -v       ## eg. v5.0.0`
-* `npm -v        ## eg. 3.3.6`
-* `git --version ## eg. 2.6.3.windows.1`
-* `ruby -v       ## eg. 2.2.3p173`
-* `gem -v        ## eg. 2.4.5.1`
+- `node -v       ## eg. v5.0.0`
+- `npm -v        ## eg. 3.3.6`
+- `git --version ## eg. 2.6.3.windows.1`
+- `ruby -v       ## eg. 2.2.3p173`
+- `gem -v        ## eg. 2.4.5.1`
 
 2. Install Grunt, Bower, Browserify, and Sass
-* `npm i grunt-cli -g`
-* `npm i bower -g`
-* `npm i browserify -g`
-* `gem install sass`
+- `npm i grunt-cli -g`
+- `npm i bower -g`
+- `npm i browserify -g`
+- `gem install sass`
 
 3. Install all the modules and compile the SCSS and JS
-`npm run initial-setup`
+- `npm run initial-setup`
 
 ###Workflow
 1. Start the Sublime project by opening `Baseplate.sublime-project`
-1. Open up a terminal window. (On Windows, Shift+Right Click inside the folder and select Open command window here).
-2. Navigate to the root directory of this project. `cd ../Baseplate`
-3. Run `npm run watch`
+2. Open up a terminal window. (On Windows, Shift+Right Click inside the folder and select Open command window here).
+3. Navigate to the root directory of this project. `cd ../Baseplate`
+4. Run `npm run watch`
 
 What's going on up there:
 The `npm run initial-setup` command runs `npm install` and `bower install` to install all the dependencies in the
