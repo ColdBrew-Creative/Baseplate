@@ -1,0 +1,27 @@
+{
+  "name": "wordpress-baseplate",
+  "description": "This is a bare bones WordPress theme to help you get started.",
+  "main": "index.js",
+  "authors": [
+    "Cold Brew Creative"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "wordpress"
+  ],
+  "homepage": "https://github.com/CyberSpark/Baseplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "font-awesome": "fontawesome#~4.4.0",
+    "foundation": "~5.5.3",
+    "jquery": "~2.1.4",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

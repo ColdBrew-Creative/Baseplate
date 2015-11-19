@@ -11,5 +11,12 @@ Tags:
 Text Domain: baseplate
 */
 
-// Do not delete these. They are only to keep Theme Check happy
-.aligncenter, .alignleft, .alignright, .bypostauthor, .gallery-caption, .sticky, .wp-caption, .wp-caption-text {}
+/* Do not delete these. They are only to keep Theme Check happy */
+.aligncenter,
+.alignleft,
+.alignright,
+.bypostauthor,
+.gallery-caption,
+.sticky,
+.wp-caption,
+.wp-caption-text {}
