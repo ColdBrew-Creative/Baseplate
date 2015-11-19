@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pillowfication/Baseplate.git"
+    "url": "git+https://github.com/CyberSpark/Baseplate.git"
   },
   "keywords": [
     "wordpress"
@@ -17,9 +17,9 @@
   "author": "Cold Brew Studios",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pillowfication/Baseplate/issues"
+    "url": "https://github.com/CyberSpark/Baseplate/issues"
   },
-  "homepage": "https://github.com/pillowfication/Baseplate#readme",
+  "homepage": "https://github.com/CyberSpark/Baseplate#readme",
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.6.5",
