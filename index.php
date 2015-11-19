@@ -427,22 +427,6 @@ function FisherYates(array) {
 
 <section><!-- Miscellaneous -->
 	<div class="row">
-
-		<h2>Other HTML5 Elements</h2>
-
-		<h4>Details and Summary</h4>
-		<details>
-			<summary>This is a delicious webpage</summary>
-			<p>It makes me very hungry.</p>
-			<p>And very happy.</p>
-		</details>
-
-		<h4>Meter (Firefox, Chrome, Safari, Opera)</h4>
-		<meter value="65" min="0" max="100">65 out of 100</meter>
-
-		<h4>Progress</h4>
-		<progress value="50" max="100"></progress>
-
 		<h2>Icons</h2>
 
 		<i class="fa fa-cog fa-3x"></i>
