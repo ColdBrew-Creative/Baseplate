@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-newer');
-
+	
 	grunt.registerTask('default', ['watch', 'sass', 'cssmin', 'newer:uglify']);
 	grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify']);
 

@@ -6,10 +6,9 @@ the whole project.
 */
 
 // Import our Bower components
-@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
-// Set variables and reusable mixins and Bourbon
+// Set variables and reusable mixins
 @import "config"; /* adds reusable colors and measurements */
 @import "mixins"; /* adds a variety of useful Sass plugins */
 
