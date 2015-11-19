@@ -19,7 +19,7 @@
 	</footer>
 
 	<!-- .js files -->
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/main.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/dist/js/main.min.js"></script>
 
 	<?php if(!is_user_logged_in()) { ?>
 		<!-- Google Analytics CODE GOES HERE -->
