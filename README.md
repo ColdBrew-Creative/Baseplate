@@ -27,11 +27,11 @@ This will vary depending on the framework you are using. The following is how to
 Simple! Just make sure you have the following items installed.
 
 1. Make sure you have installed Node.js, Git, and Ruby
-- `node -v       ## eg. v5.0.0`
-- `npm -v        ## eg. 3.3.6`
-- `git --version ## eg. 2.6.3.windows.1`
-- `ruby -v       ## eg. 2.2.3p173`
-- `gem -v        ## eg. 2.4.5.1`
+ * `node -v       ## eg. v5.0.0`
+ * `npm -v        ## eg. 3.3.6`
+ * `git --version ## eg. 2.6.3.windows.1`
+ * `ruby -v       ## eg. 2.2.3p173`
+ * `gem -v        ## eg. 2.4.5.1`
 
 2. Install Grunt, Bower, Browserify, and Sass
 - `npm i grunt-cli -g`
