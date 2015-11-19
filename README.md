@@ -34,13 +34,13 @@ Simple! Just make sure you have the following items installed.
  * `gem -v        ## eg. 2.4.5.1`
 
 2. Install Grunt, Bower, Browserify, and Sass
-- `npm i grunt-cli -g`
-- `npm i bower -g`
-- `npm i browserify -g`
-- `gem install sass`
+ * `npm i grunt-cli -g`
+ * `npm i bower -g`
+ * `npm i browserify -g`
+ * `gem install sass`
 
 3. Install all the modules and compile the SCSS and JS
-- `npm run initial-setup`
+ * `npm run initial-setup`
 
 ###Workflow
 1. Start the Sublime project by opening `Baseplate.sublime-project`
@@ -48,7 +48,7 @@ Simple! Just make sure you have the following items installed.
 3. Navigate to the root directory of this project. `cd ../Baseplate`
 4. Run `npm run watch`
 
-What's going on up there:
+What's going on up there?
 The `npm run initial-setup` command runs `npm install` and `bower install` to install all the dependencies in the
 `packages.json` and `bower.json` files. Those get installed into the `node_modules` and `bower_components` folder
 respectively. Finally `npm run initial-setup` runs `grunt compile` which compiles the SCSS in `src/scss` to
