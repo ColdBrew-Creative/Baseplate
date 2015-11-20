@@ -1,13 +1,6 @@
 <?php get_header(); ?>
 
 <div class="row">
-	<div class="small-12 columns">
-		<figure id="average-boat-img"></figure>
-	</div>
-</div>
-
-
-<div class="row white">
 
 	<div class="large-8 medium-8 columns content">
 
