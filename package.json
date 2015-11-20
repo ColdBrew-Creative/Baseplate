@@ -4,7 +4,8 @@
   "description": "This is a bare bones WordPress theme to help you get started.",
   "main": "index.js",
   "scripts": {
-    "initial-setup": "npm i && bower i && grunt build"
+    "initial-setup": "npm i && bower i && grunt build",
+    "browserify": "browserify src/js/main.js -o dist/js/test.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "^0.10.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-newer": "^1.1.1"
+    "grunt-newer": "^1.1.1",
+    "jquery": "^2.1.4"
   }
 }

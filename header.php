@@ -33,8 +33,8 @@
 	<!-- Load CSS Files -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css" />
 
-	<!-- jQuery -->
-	<script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Load JS Files -->
+	<script src="<?php echo get_template_directory_uri(); ?>/dist/js/test.js"></script>
 
 	<?php wp_head(); ?>
 </head>
