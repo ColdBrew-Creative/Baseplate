@@ -74,17 +74,17 @@ module.exports = function(grunt) {
 
 /* ================== Plugins ================== */
 	// Load the plugins
-    // Make sure dependencies have 
-    // been installed in the package.json
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-newer');
+	// Make sure dependencies have 
+	// been installed in the package.json
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-newer');
 
-    grunt.registerTask('default', ['watch', 'sass', 'newer:autoprefixer', 'cssmin', 'newer:uglify']);
-    grunt.registerTask('build', ['sass', 'cssmin', 'autoprefixer', 'concat', 'uglify']);
+	grunt.registerTask('default', ['watch', 'sass', 'newer:autoprefixer', 'cssmin', 'newer:uglify']);
+	grunt.registerTask('build', ['sass', 'cssmin', 'autoprefixer', 'concat', 'uglify']);
 
 };
