@@ -2,7 +2,7 @@
 
 <section>
 	<div class="row">
-		<h1>Baseplate - Test</h1>
+		<h1>Baseplate</h1>
 		<h2>A modern starting point for WordPress themes.</h2>
 	</div>
 </section>
@@ -399,7 +399,7 @@ function FisherYates(array) {
 				     alt="Cat"
 				     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
 				     sizes="(min-width:480px) 100vw, 50vw"
-				     class="alignleft"
+				     class="alignleft" 
 				     style="height:200px" />
 		</div>
 		<div class="row">
@@ -417,7 +417,7 @@ function FisherYates(array) {
 				     alt="Cat"
 				     srcset="<?php echo get_template_directory_uri(); ?>/library/img/cat@2x.jpg 2x, <?php echo get_template_directory_uri(); ?>/library/img/cat.jpg 1x"
 				     sizes="(min-width:480px) 100vw, 50vw"
-				     class="alignright"
+				     class="alignright" 
 				     style="height:200px" />
 		</div>
 	</div>
