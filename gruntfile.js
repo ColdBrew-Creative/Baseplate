@@ -63,6 +63,47 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		// Generate favicon
+		realFavicon: {
+			favicons: {
+				src: 'favicon.png',
+				dest: 'dist/img/icons',
+				options: {
+					iconsPath: '<?php echo get_template_directory_uri(); ?>/dist/img/icons',
+					// html: [ 'header.php' ], // disabled because it messes up the file
+					design: {
+						ios: {
+							pictureAspect: 'noChange'
+						},
+						desktopBrowser: {},
+						windows: {
+							pictureAspect: 'noChange',
+							backgroundColor: '#da532c',
+							onConflict: 'override'
+						},
+						androidChrome: {
+							pictureAspect: 'noChange',
+							themeColor: '#ffffff',
+							manifest: {
+								name: 'App Name',
+								display: 'browser',
+								orientation: 'notSet',
+								onConflict: 'override'
+							}
+						},
+						safariPinnedTab: { // this isn't really making a good SVG right now
+							pictureAspect: 'blackAndWhite',
+							threshold: 32.8125,
+							themeColor: '#000000'
+						}
+					},
+					settings: {
+						scalingAlgorithm: 'Mitchell',
+						errorOnImageTooSmall: false
+					}
+				}
+			}
+		},
 		// Watch for changes and run tasks
 		watch: {
 			scripts: {
@@ -82,9 +123,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-real-favicon');
 	grunt.loadNpmTasks('grunt-newer');
 
 	grunt.registerTask('default', ['watch', 'sass', 'newer:autoprefixer', 'cssmin', 'newer:uglify']);
-	grunt.registerTask('build', ['sass', 'cssmin', 'autoprefixer', 'concat', 'uglify']);
+	grunt.registerTask('build', ['sass', 'cssmin', 'autoprefixer', 'concat', 'realFavicon', 'uglify']);
 
 };
